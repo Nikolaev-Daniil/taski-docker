@@ -86,4 +86,4 @@ jobs:
           # Для каждого пересобранного образа 
           # устанавливаем тег latest, чтобы потом
           # на сервере и в docker-compose.yml не указывать версию
-          tags: BlackSabbath/taski_backend:latest 
+          tags: blacksabbath/taski_backend:latest 
