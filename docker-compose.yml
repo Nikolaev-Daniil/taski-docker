@@ -1,3 +1,4 @@
+# docker-compose.yml
 version: '3'
 
 volumes:
@@ -24,9 +25,9 @@ services:
       - static:/frontend_static
 
   gateway:
-    build: ./gateway/
-    # А тут подключаем volume со статикой к gateway
+    build: ./nginx/
+    env_file: .env
     volumes:
-      - static:/staticfiles/
+      - static:/staticfiles
     ports:
       - 8000:80 
